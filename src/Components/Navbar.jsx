@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Search, ShoppingCartOutlined} from '@material-ui/icons';
+import {Search, ShoppingCartOutlined, Menu} from '@material-ui/icons';
 import { Badge } from '@material-ui/core';
 
 
@@ -37,23 +37,45 @@ const Input = styled.input`
 const Center = styled.div`
     flex: 1;
     text-align: center;
+    @media screen and (max-width: 768px) {
+        margin-left: 10px;
 `;
 const Logo= styled.h1`
     font-weigth: bold;
-`
+    @media screen and (max-width: 768px) {
+        margin-left: 10px;
+`;
 const Right = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    @media screen and (max-width: 768px) {
+        display: none;
 `;
 const MenuItem = styled.div`
     font-size: 14px;
     cursor: pointer; 
     margin-left: 25px;
-` 
+` ;
+const Bars = styled.span`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 75%);
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+`;
+  
+
 
 const Navbar = () => {
+  
   return (
     <Container>
         <Wrapper>
@@ -78,6 +100,9 @@ const Navbar = () => {
                     </Badge>
                 </MenuItem>
             </Right>
+            <Bars>
+                <Menu/>
+            </Bars>
         </Wrapper>
     </Container>
   )
