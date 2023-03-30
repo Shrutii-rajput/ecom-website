@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import {Search, ShoppingCartOutlined} from '@material-ui/icons';
 import { Badge } from '@material-ui/core';
 
+
 const Container = styled.div`
     height: 60px;
+    background-color: pink;
 `;
 const Wrapper = styled.div`
     padding: 10px 20px;
@@ -22,7 +24,7 @@ const Language = styled.span`
     cursor: pointer;
 `;
 const SearchContainer = styled.div`
-    border: 1px solid lightgray;
+    border: 1px solid black;
     display: flex;
     align-items: center;
     margin-left: 25px;
@@ -30,6 +32,7 @@ const SearchContainer = styled.div`
 `
 const Input = styled.input`
     border: none;
+    background-color: pink;
 `;
 const Center = styled.div`
     flex: 1;
@@ -58,13 +61,15 @@ const Navbar = () => {
                 <Language>EN</Language>
                 <SearchContainer>
                     <Input/>
-                    <Search style={{color: 'gray', fontSize: 16}}/>
+                    <Search style={{color: 'black', fontSize: 16}}/>
                 </SearchContainer>
             </Left>
             <Center>
-                <Logo>ECOM</Logo>
+                <Logo>NAVBAR</Logo>
             </Center>
             <Right>
+                <MenuItem>ABOUT</MenuItem>
+                <MenuItem>CONTACT</MenuItem>
                 <MenuItem>REGISTER</MenuItem>
                 <MenuItem>SIGN IN</MenuItem>
                 <MenuItem>
